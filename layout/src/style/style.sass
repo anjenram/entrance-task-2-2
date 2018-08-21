@@ -1,0 +1,50 @@
+$bg-color: #333
+$color: #333
+$fontNormal: ArialMT, Arial, sans-serif
+$fontBold: Arial-BoldMT
+html 
+    height: 100%
+::-webkit-scrollbar
+    display: none
+::-moz-scrollbar
+    display: none
+::-ms-scrollbar
+    display: none        
+body
+    height: 100%
+    color: $color
+    margin: 0
+    padding: 0
+    font-family: $fontNormal
+    display: flex
+    flex-direction: column
+    
+a 
+    text-decoration: none
+    color: $color
+.wrapper
+    display: flex
+    flex-flow: wrap
+    margin-left: 40px
+    flex-direction: column
+p.conteiner__title
+    font-size: 18px
+    color: $color
+    line-height: 21px
+    font-weight: bold
+    &.--script_title
+        margin-bottom: 0
+@import 'imports/header.sass'
+@import 'imports/main.sass'
+@import 'imports/scripts.sass'
+@import 'imports/devices.sass'
+@import 'imports/footer.sass'
+@import 'imports/cards-device.sass'
+@import 'imports/cards-scripts.sass'
+@import 'imports/modal.sass'
+
+@import 'imports/media/index.sass'
+
+
+
+

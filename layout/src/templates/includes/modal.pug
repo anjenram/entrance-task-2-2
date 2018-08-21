@@ -1,0 +1,31 @@
+.modal
+    .modal__conteiner
+        .modal__conteiner__content
+            .modal__content__head
+                .content__head__device
+                    p.device__name
+                    p.device__status
+                    .modal__content__tabs
+                        ul.modal__tab.--modal-sun
+                            li.modal__tab__item.active Вручную
+                            li.modal__tab__item Дневной свет
+                            li.modal__tab__item Вечерний свет
+                        ul.modal__tab.--modal-temp
+                            li.modal__tab__item.active Вручную
+                            li.modal__tab__item Холодно
+                            li.modal__tab__item Тепло
+                .content__head__icon 
+                    .vaule +23
+                    .icon
+            .modal__content__body
+                    input(type="range", name="").modal_rage
+                    .dial__vaule 0
+                    .modal__dial
+                        .dial__center
+                            .dial__pointer
+        .modal__conteiner__control
+            .modal__control
+                .modal__btn.--apply
+                    span Применить
+                .modal__btn.--cancel
+                    span Закрыть

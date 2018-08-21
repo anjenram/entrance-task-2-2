@@ -1,0 +1,298 @@
+.modal
+    position: absolute
+    z-index: 10
+    height: 100vh
+    overflow-y: hidden
+    width: 100%
+    align-items: center
+    justify-content: center
+    background: rgba(51,51,51,0.50)
+    display: none
+    padding: 0
+    margin: 0
+    flex-direction: column
+    top: -100px
+    left: -100px
+    opacity: 0.3
+    transition: all 0.5s ease
+    .modal__conteiner
+        margin: auto 20px
+        display: flex
+        flex-direction: column
+        .modal__conteiner__content
+            height: auto
+            width: auto
+            border-radius: 20px
+            background: #FFFFFF
+            display: flex
+            flex-direction: column
+            overflow: hidden
+            padding-bottom: 15px
+            .modal__content__head
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+                margin-bottom: 15px
+                .content__head__icon
+                    margin-top: 18px
+                    margin-right: 20px
+                    display: flex
+                    flex-direction: row
+                    justify-content: center
+                    align-items: center
+                    .vaule
+                        font-weight: bold
+                        font-size: 36px
+                        display: none
+                        &.--temp
+                            display: inline-block
+                        &.--sun
+                            display: none
+                    .icon
+                        width: 48px
+                        height: 48px
+                        &.--temp
+                            background-image: url('./../assets/icon_temperature@2x.png')
+                            &.active
+                                background-image: url('./../assets/icon_temperature_2@2x.png')
+                        &.--sun
+                            background-image: url('./../assets/icon_sun@2x.png')
+                            &.active
+                                background-image: url('./../assets/icon_sun_2@2x.png')    
+            .content__head__device
+                margin-top: 18px
+            
+                .device__name
+                    font-size: 27px
+                    font-weight: bold
+                    margin-top: 2px 
+                    margin-left: 20px
+                    margin-bottom: 2px     
+                .device__status
+                    font-size: 14px
+                    margin-top: 2px 
+                    margin-left: 20px 
+                .modal__content__tabs
+                    margin-top: 15px
+                    .modal__tab
+                        align-self: flex-start
+                        margin-top: auto
+                        margin-bottom: auto
+                        margin-right: auto
+                        padding-left: 0
+                        list-style-type: none
+                        flex-direction: row
+                        overflow-y: hidden
+                        .modal__tab__item
+                            &:first-child
+                                margin-left: 20px
+                            font-size: 13px
+                            font-weight: bold 
+                            padding: 3px 10px 
+                            margin-left: 10px
+                            text-align: center
+                            line-height: 27px
+                            border-radius: 20px
+                            background: #F7F7F7
+                            cursor: pointer
+                            white-space: nowrap
+                            &.active
+                                background: #FFD93E
+                                border-radius: 20px
+                        &.--modal-sun
+                            display: none
+                        &.--modal-temp
+                            display: none
+        .modal__conteiner__control
+            margin-top: 20px
+            .modal__control
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+                .modal__btn
+                    &:first-child
+                        margin-right: 16px
+                    font-size: 18px
+                    font-weight: bold
+                    width: 307px
+                    height: 60px
+                    margin: auto auto
+                    border-radius: 20px
+                    background: #FFFFFF
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    cursor: pointer
+                    &.--apply
+                        background: #FFD93E
+                    &.--cancel
+.modal__content__body
+    display: flex
+    justify-content: center
+    align-self: center
+    height: -webkit-fill-available
+    height: 100%
+    outline: none
+    -webkit-appearance: none
+    appearance: none
+    align-items: center
+    .dial__vaule
+        font-size: 66px
+        font-weight: bold
+        position: absolute
+        z-index: 10
+        transform: rotate(0)
+        display: none
+    .modal__dial
+        align-self: center
+        width: 221px
+        height: 221px
+        background-image: url('./../assets/Oval.png')
+        display: none
+        justify-content: center
+        align-items: center
+        &:before
+            content: ' '
+            height: 77px
+            width: 65px
+            position: absolute
+            margin-left: 70px
+            margin-top: 66px
+            transform: rotate(5deg)
+            background-image: url('./../assets/Oval Copy.png')
+        &:after
+            margin-top: 187px
+            content: ' '
+            width: 110px
+            height: 34px
+            background: #fff
+            -webkit-clip-path: polygon(23% 0%, 86% 0%, 100% 100%, 10% 100%)
+            clip-path: polygon(23% 0%, 86% 0%, 100% 100%, 10% 100%)
+        .dial__center
+            width: 178px
+            height: 178px
+            background: #FEFEFE
+            box-shadow: 0 2px 4px 0 rgba(134,121,71,0.45)
+            border-radius: 50%
+            display: flex
+            position: absolute
+            z-index: 5
+            
+            .dial__pointer
+                background-image: url('./../assets/Icons/icon_arrow.svg')
+                width: 12px
+                height: 8px
+                align-self: flex-end
+                transform: rotate(-140deg)
+                margin-left: 25px
+                margin-bottom: 25px
+    .modal_rage
+        width: 580px
+        -webkit-appearance: none
+        appearance: none
+        display: none
+        -moz-appearance: none
+        -ms-appearance: none
+        &.--temp
+            &::-webkit-slider-runnable-track
+                background: linear-gradient(-270deg, #068FFF 0%, #FFD800 50%, #F76B1C 100%)
+            &::-moz-range-track
+                background: linear-gradient(-270deg, #068FFF 0%, #FFD800 50%, #F76B1C 100%)
+            &::-ms-track
+                background: linear-gradient(-270deg, #068FFF 0%, #FFD800 50%, #F76B1C 100%)
+            &:before
+                content: "-10"
+                display: block
+                font-weight: bold
+                color: #fff
+                font-size: 18px 
+                position: relative
+                top: 20px
+                left: 40px
+            &:after
+                content: "+30"
+                display: block
+                font-weight: bold
+                color: #fff
+                font-size: 18px 
+                position: relative
+                top: 20px
+                right: 40px 
+        &.--sun
+            &::-webkit-slider-runnable-track
+                background: linear-gradient(-270deg, #FFE88C 0%, #FFB100 100%)
+            &::-moz-range-track
+                background: linear-gradient(-270deg, #FFE88C 0%, #FFB100 100%)
+            &::-ms-track
+                background: linear-gradient(-270deg, #FFE88C 0%, #FFB100 100%)
+            &:before
+                transform: rotate(-90deg)
+                content: " "
+                display: block
+                font-weight: bold
+                color: #fff
+                font-size: 18px 
+                position: relative
+                top: 12px
+                left: 50px
+                width: 36px
+                height: 36px
+                background-image: url('./../assets/icon_sun_min.png')
+
+            &:after
+                transform: rotate(-90deg)
+                content: " "
+                display: block
+                font-weight: bold
+                color: #fff
+                font-size: 18px 
+                position: relative
+                top: 12px
+                right: 50px
+                width: 36px
+                height: 36px 
+                background-image: url('./../assets/icon_sun_max.png')
+
+        &::-webkit-slider-runnable-track
+            -webkit-appearance: none
+            border-radius: 35px
+            height: 60px
+        &:focus
+            outline: none
+        &::-moz-range-track
+            border-radius: 35px 
+            height: 60px
+            appearance: none
+        &::-moz-range-thumb
+            width: 60px
+            height: 60px
+            background: rgba(1,1,1,0.01)
+            border-radius: 50%
+            box-shadow: 0 1px 10px -7px rgba(0,0,0,0.50)
+            border: 4px solid #FFFFFF
+        &::-ms-track
+            border-radius: 35px 
+            height: 60px
+        &::-ms-thumb
+            width: 60px
+            height: 60px
+            background: rgba(1,1,1,0.01)
+            border-radius: 50%
+            box-shadow: 0 1px 10px -7px rgba(0,0,0,0.50)
+            border: 4px solid #FFFFFF             
+        &::-webkit-slider-thumb
+            width: 60px 
+            height: 60px 
+            background: radial-gradient(circle farthest-side at center center, rgba(255, 255, 255, 0) 80%, rgba(52, 52, 52, 0.1) 80%) 
+            border: 4px solid #FFFFFF 
+            border-radius: 50% 
+            box-shadow: 0 1px 10px -7px rgba(0,0,0,0.50) 
+            -webkit-appearance: none
+            appearance: none
+            cursor: pointer
+.modal
+    &.show
+        transition: all 0.5s ease
+        top: 0
+        left: 0
+        opacity: 1            

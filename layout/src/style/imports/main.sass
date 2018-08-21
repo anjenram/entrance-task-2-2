@@ -1,0 +1,62 @@
+main
+    flex-basis: 50%
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    align-content: flex-start
+    margin-right: 25px
+    width: 50%
+    .arrow-top
+        width: 16px
+        height: 16px
+        position: relative
+        bottom: 10px
+        margin-left: 92px
+        background-image: url('./../assets/Icons/Arrow Double/M.png')
+    .main__bitmap
+        overflow-y: hidden
+        flex: 1
+        height: -webkit-fill-available
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: stretch
+        align-content: stretch
+        background-image: url('./../assets/bg@2x.png')
+        background-position: center
+        background-size: cover
+        align-self: stretch
+        border-radius: 20px
+        .bitmap__content
+            display: flex
+            flex-direction: column
+            .bitmap__content__weather
+                display: flex
+                flex-direction: row
+                margin: 20px
+                .weather__home
+                    margin-right: 18px
+                .weather__title
+                    font-size: 14px
+                    color: #858585
+                    margin-bottom: 4px
+                .weather__temp 
+                    font-size: 36px
+                    font-weight: bold
+                    .weather__icon
+                        width: 26px
+                        height: 26px
+                        margin-left: 5px
+                        display: inline-block
+                        background-image: url('./../assets/cloud-drizzle.png')
+        h2.main__bitmap__greeting
+            font-size: 27px
+            line-height: 31px
+            font-weight: bold
+            margin: 3px 20px
+            margin-top: 25px
+        p.main__bitmap__status
+            font-size: 14px  
+            margin: 3px 20px  
+        .bitmap__list
+            align-self: flex-end    

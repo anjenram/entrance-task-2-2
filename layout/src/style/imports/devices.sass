@@ -1,0 +1,60 @@
+.devices
+    display: flow-root
+    
+    order: 1
+    margin-top: auto
+    flex-direction: column
+    .conteiner__head
+        display: flex
+        margin-left: 40px
+        flex-direction: row
+        justify-content: space-between
+        p.conteiner__title
+            align-self: flex-start
+        ul.device__tab
+            align-self: flex-start
+            margin-top: auto
+            margin-bottom: auto
+            margin-right: auto
+            padding-left: 0
+            list-style-type: none
+            display: flex
+            flex-direction: row
+            .device__tab__item
+                font-size: 13px
+                font-weight: bold 
+                padding: 3px 10px 
+                margin-left: 25px
+                text-align: center
+                line-height: 27px
+                border-radius: 20px
+                background: #F7F7F7
+                cursor: pointer
+                   
+                &.active
+                    background: #FFD93E
+                    border-radius: 20px
+        .device__control
+            align-self: flex-end
+            align-items: center
+            margin-right: 40px
+            margin-left: auto
+            margin-top: auto
+            margin-bottom: auto
+            .arrow__left
+                display: inline-block
+                margin-right: 20px
+                width: 9px
+                height: 14px
+                cursor: pointer
+                background-image: url('./../assets/icons/arrow-left.svg')
+            .arrow__right
+                display: inline-block
+                transform: scale(-1, 1)
+                width: 9px
+                height: 14px
+                cursor: pointer
+                background-image: url('./../assets/icons/arrow-left.svg')
+.conteiner__list--device
+    overflow-y: hidden
+    

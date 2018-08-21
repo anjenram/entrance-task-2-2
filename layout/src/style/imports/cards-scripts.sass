@@ -1,0 +1,55 @@
+ul.list__script
+    list-style: none
+    padding-left: 0
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+    overflow-y: hidden
+    .list__script__item
+        &:first-child
+            margin-left: 0
+        cursor: pointer
+        height: 100px
+        width: 200px
+        background: #F7F7F7
+        border-radius: 20px
+        margin-right: 15px
+        margin-bottom: 15px
+        min-width: 200px
+        .script__desc
+            margin-left: 15px
+        .script__item__icon
+            height: 24px
+            width: 24px
+            margin-top: 15px
+            margin-left: 15px
+        p.script_item__name
+            font-weight: bold
+            font-size: 14px
+            color: #333
+            margin-bottom: 2px
+        p.script_item__name_status
+            margin-top: 2px
+            font-size: 12px
+            color: #858585
+            letter-spacing: 0.01px         
+        &.script--sun
+            .script__item__icon
+                background-image: url('./../assets/icon_sun@1x.png')
+            &.active
+                .script__item__icon
+                    background-image: url('./../assets/icon_sun_2@1x.png')
+        &.script--time
+            .script__item__icon
+                background-image: url('./../assets/icon_scheduled@1x.png')
+            &.active
+                .script__item__icon
+        &.script--temp
+            .script__item__icon
+                background-image: url('./../assets/icon_sun_2@1x.png')
+            &.active
+                .script__item__icon
+                     background-image: url('./../assets/icon_temperature_2@1x.png')
+        &:hover
+            box-shadow: 0 2px 6px 0 rgba(197,186,186,0.50)
+            background: #FFFFFF                

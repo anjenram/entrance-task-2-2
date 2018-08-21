@@ -1,0 +1,43 @@
+main 
+    flex-basis: auto
+    min-width: auto
+    width: auto
+    margin-right: 20px
+    margin-left: 20px
+    .main__bitmap
+        .arrow-top
+            display: none
+        flex-direction: column
+        height: 282px
+        overflow-y: auto
+        .bitmap__content
+            .main__bitmap__greeting
+                font-size: 18px
+            .main__bitmap__status
+                font-size: 12px
+            .bitmap__content__weather
+                margin-top: 5px
+                .weather__title
+                    font-size: 12px
+                    margin-top: 0
+                .weather__temp
+                    font-size: 24px
+                    .weather__icon
+                        width: 18px
+                        height: 18px
+                        background-size: cover        
+        .bitmap__list
+            overflow-y: hidden
+            align-self: auto
+            .list__device
+                // margin-left: 200px
+                margin-right: -150px
+                flex-direction: row
+                margin-bottom: 15px
+                margin-left: 40px
+                &.--main
+                    // .list__device__item
+                    //     &:first-child
+                    //     margin-left: 210px
+                .list__device__item
+                    margin-right: 20px
